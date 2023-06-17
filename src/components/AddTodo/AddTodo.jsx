@@ -1,14 +1,7 @@
 import './addTodo.css';
 
-export default function AddTodo({
-  // eslint-disable-next-line react/prop-types
-  addTodo,
-  // eslint-disable-next-line react/prop-types
-  validateForm,
-  // eslint-disable-next-line react/prop-types
-  setErrors,
-}) {
-  const handleSubmit = (event) => {
+export default function AddTodo({ addTodo, validateForm, setErrors }) {
+  const handleSubmit = event => {
     event.preventDefault();
 
     const newErrors = validateForm();
@@ -24,7 +17,7 @@ export default function AddTodo({
     <button
       type="submit"
       className="button"
-      onClick={(event) => handleSubmit(event)}
+      onClick={event => handleSubmit(event)}
     >
       Add Todo
     </button>

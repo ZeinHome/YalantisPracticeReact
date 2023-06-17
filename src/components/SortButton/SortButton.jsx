@@ -1,6 +1,5 @@
 import './sortButton.css';
 
-// eslint-disable-next-line react/prop-types
 export default function SortButton({ todos, setTodos }) {
   const sortListTodo = () => {
     const sortedTodos = [...todos].sort((a, b) => {

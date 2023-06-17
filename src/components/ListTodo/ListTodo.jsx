@@ -1,14 +1,12 @@
 import './listTodo.css';
 
 export default function ListTodo({
-  // eslint-disable-next-line react/prop-types
   todos,
-  // eslint-disable-next-line react/prop-types
+
   setTodos,
 }) {
-  const onChangeCompleted = (id) => {
-    // eslint-disable-next-line react/prop-types
-    const updatedTodos = todos.map((todo) => {
+  const onChangeCompleted = id => {
+    const updatedTodos = todos.map(todo => {
       if (todo.id === id) {
         return { ...todo, completed: !todo.completed };
       }
@@ -18,15 +16,13 @@ export default function ListTodo({
     setTodos(updatedTodos);
   };
 
-  const deleteTodo = (id) => {
-    // eslint-disable-next-line react/prop-types
-    const updatedTodos = todos.filter((todo) => todo.id !== id);
+  const deleteTodo = id => {
+    const updatedTodos = todos.filter(todo => todo.id !== id);
     setTodos(updatedTodos);
   };
 
   const handleChangeTitle = (event, id) => {
-    // eslint-disable-next-line react/prop-types
-    const updatedTodos = todos?.map((todo) => {
+    const updatedTodos = todos?.map(todo => {
       if (todo.id === id) {
         return {
           ...todo,
@@ -40,8 +36,7 @@ export default function ListTodo({
   };
 
   const handleChangeDescription = (event, id) => {
-    // eslint-disable-next-line react/prop-types
-    const updatedTodos = todos?.map((todo) => {
+    const updatedTodos = todos?.map(todo => {
       if (todo.id === id) {
         return {
           ...todo,
@@ -67,9 +62,7 @@ export default function ListTodo({
           >
             {`Title: ${title}`}
           </h2>
-          <p className="todo-description">
-            {`Description: ${description}`}
-          </p>
+          <p className="todo-description">{`Description: ${description}`}</p>
           <button
             type="button"
             className="todo-button"
@@ -90,7 +83,7 @@ export default function ListTodo({
               placeholder="Title"
               className="input"
               value={title}
-              onChange={(event) => handleChangeTitle(event, id)}
+              onChange={event => handleChangeTitle(event, id)}
             />
 
             <input
@@ -98,7 +91,7 @@ export default function ListTodo({
               placeholder="Description"
               className="input"
               value={description}
-              onChange={(event) => handleChangeDescription(event, id)}
+              onChange={event => handleChangeDescription(event, id)}
             />
           </div>
         </li>
