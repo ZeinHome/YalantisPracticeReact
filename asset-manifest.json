@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/YalantisPracticeReact/static/css/main.31f5b96a.css",
+    "main.css": "/YalantisPracticeReact/static/css/main.7b16636b.css",
     "main.js": "/YalantisPracticeReact/static/js/main.6ec8fae0.js",
     "index.html": "/YalantisPracticeReact/index.html",
-    "main.31f5b96a.css.map": "/YalantisPracticeReact/static/css/main.31f5b96a.css.map",
+    "main.7b16636b.css.map": "/YalantisPracticeReact/static/css/main.7b16636b.css.map",
     "main.6ec8fae0.js.map": "/YalantisPracticeReact/static/js/main.6ec8fae0.js.map"
   },
   "entrypoints": [
-    "static/css/main.31f5b96a.css",
+    "static/css/main.7b16636b.css",
     "static/js/main.6ec8fae0.js"
   ]
 }
