@@ -1,0 +1,29 @@
+.sort-container {
+  position: absolute;
+  left: 300px;
+  top: 50px;
+}
+
+.sort__btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sort__btn:hover {
+  background-color: #0056b3;
+}
+
+.sort__btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.sort__btn:active {
+  transform: translateY(1px);
+}
