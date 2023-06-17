@@ -89,7 +89,6 @@ export default function ListTodo({
               type="text"
               placeholder="Title"
               className="input"
-              // eslint-disable-next-line react/prop-types
               value={title}
               onChange={(event) => handleChangeTitle(event, id)}
             />
@@ -98,7 +97,6 @@ export default function ListTodo({
               type="text"
               placeholder="Description"
               className="input"
-              // eslint-disable-next-line react/prop-types
               value={description}
               onChange={(event) => handleChangeDescription(event, id)}
             />
