@@ -27,7 +27,7 @@ export default function App() {
   };
 
   const addTodo = () => {
-    const currentDate = new Date();
+    const currentDate = new Date().toLocaleString();
     const formattedDate = currentDate.toLocaleString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -42,7 +42,7 @@ export default function App() {
       createdAt: formattedDate,
     };
 
-    setTodos((prev) => [...prev, todoWithId]);
+    setTodos(prev => [...prev, todoWithId]);
     setNewTodo({
       id: '',
       title: '',
@@ -52,11 +52,11 @@ export default function App() {
     });
   };
 
-  const onChangeTitle = (event) => {
-    setNewTodo((prev) => ({ ...prev, title: event.target.value }));
+  const onChangeTitle = event => {
+    setNewTodo(prev => ({ ...prev, title: event.target.value }));
   };
-  const onChangeDescription = (event) => {
-    setNewTodo((prev) => ({
+  const onChangeDescription = event => {
+    setNewTodo(prev => ({
       ...prev,
       description: event.target.value,
     }));

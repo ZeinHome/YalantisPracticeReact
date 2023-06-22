@@ -1,10 +1,11 @@
 import './sortButton.css';
+import moment from 'moment';
 
 export default function SortButton({ todos, setTodos }) {
   const sortListTodo = () => {
-    const sortedTodos = [...todos].sort((a, b) => {
-      const dateA = new Date(a.createdAt);
-      const dateB = new Date(b.createdAt);
+    const sortedTodos = todos.sort((a, b) => {
+      const dateA = moment(a.createAt, 'DD-MM-YYYY, HH:mm:ss');
+      const dateB = moment(b.createAt, 'DD-MM-YYYY, HH:mm:ss');
       return dateA - dateB;
     });
 
